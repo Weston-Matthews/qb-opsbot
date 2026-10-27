@@ -268,4 +268,4 @@ Action: Added invoice, purchase order, and bill to QuickBooks
 
 ## License
 
-TBD
+MIT. See [LICENSE](LICENSE).
