@@ -1,0 +1,16 @@
+Item Name,TEST,NORTH,SOUTH,BOOK-A
+custPrimary,Site North (internal),Site North (internal),Site North (internal),Site North (internal)
+custSecondary,Site South (internal),Site South (internal),Site South (internal),Site South (internal)
+Assay Pt,Converters:Assay Pt,Converters:Assay Pt,Converters:Assay Pt,Converters:Pt
+Assay Pd,Converters:Assay Pd,Converters:Assay Pd,Converters:Assay Pd,Converters:Pd
+Assay Rh,Converters:Assay Rh,Converters:Assay Rh,Converters:Assay Rh,Converters:Rh
+Treatment Charge,Assay Fees:Treatment Charge,Assay Fees:Treatment Charge,Assay Fees:Treatment Charge,Assay Fees:Treatment
+Interest Charge,Assay Fees:Interest Charge,Assay Fees:Interest Charge,Assay Fees:Interest Charge,Assay Fees:Interest
+Wire Fee,Assay Fees:Wire Fee,Assay Fees:Wire Fee,Assay Fees:Wire Fee,Assay Fees:Wire
+Widget Core - Large,Converters:Widget Core L,Converters:Widget Core L,Converters:Widget Core L,Converters:WCL
+Widget Core - Small,Converters:Widget Core S,Converters:Widget Core S,Converters:Widget Core S,Converters:WCS
+Sample Weight,Converters:Sample Weight,Converters:Sample Weight,Converters:Sample Weight,Converters:Sample Wgt
+Mixed Lot,Converters:Mixed Lot,Converters:Mixed Lot,Converters:Mixed Lot,
+Oxygen Sensor,Each:Oxygen Sensor,Each:Oxygen Sensor,Each:Oxygen Sensor,Each:O2 Sensor
+Copper Scrap,Metals:Copper Scrap,Metals:Copper Scrap,Metals:Copper Scrap,Metals:Cu
+Aluminum Scrap,Metals:Aluminum Scrap,Metals:Aluminum Scrap,Metals:Aluminum Scrap,Metals:Al

@@ -1,0 +1,75 @@
+{
+  "_comment": "Sample configuration with fictional sites, vendors and items. Copy to config.json and edit. Relative paths are resolved against this file's folder.",
+
+  "default_profile": "TEST",
+
+  "paths": {
+    "vendor_list": "data/vendors.example.csv",
+    "item_map": "data/item_map.example.csv",
+    "contract_summary_workbook": "",
+    "log_file": "log/log.txt"
+  },
+
+  "_books_comment": "Books code -> menu label and QuickBooks company file. The code must match a column in the item map and the code printed on the settlement statement.",
+  "books": {
+    "TEST":   {"label": "Sandbox Company", "company_file": "C:\\QuickBooks\\Sandbox\\Sandbox Company.qbw"},
+    "NORTH":  {"label": "Site North",      "company_file": "\\\\fileserver\\QuickBooks\\Site North.qbw"},
+    "SOUTH":  {"label": "Site South",      "company_file": "\\\\fileserver\\QuickBooks\\Site South.qbw"},
+    "BOOK-A": {"label": "Book A",          "company_file": "\\\\fileserver\\QuickBooks\\Book A.qbw"}
+  },
+  "book_aliases": {"BOOK-A2": "BOOK-A"},
+
+  "_profiles_comment": "Which company files the Connect menu offers on each machine (Options > Set server location).",
+  "server_profiles": {
+    "TEST": ["TEST"],
+    "Region 1": ["NORTH", "SOUTH", "BOOK-A"]
+  },
+
+  "settlement_layout": {
+    "sheet_index": 2,
+    "value_col": 7,
+    "books_code_col": 1,
+    "customer_row_offset": 2,
+    "labels": {
+      "contract_number": "Contract Number",
+      "customer": "Customer:",
+      "payment_date": "Payment Date",
+      "lot_control": "Lab Control",
+      "assay_section": ["Paid on Assay", "Purchased on Assay"],
+      "assay_total": "TOTAL ",
+      "non_assay_section": "Not on Assay",
+      "fees_section": "Fees",
+      "fees_end": "TOTAL",
+      "treatment_charge": "Treatment Charge",
+      "advance_payment": "Less Advance Payment",
+      "final_interest": "Interest on Final Payment",
+      "final_wire": "Wire Transfer Fee (Final)",
+      "final_balance": "FINAL BALANCE DUE"
+    },
+    "assay":     {"first_row_offset": 2, "qty_col_offset": 4, "amount_col_offset": 6, "total_label_col_offset": 5},
+    "non_assay": {"first_row_offset": 2, "name_col": 4, "qty_col": 5, "rate_col": 6},
+    "fees":      {"row_offset": 1, "label_col_offset": 4, "value_col_offset": 1}
+  },
+
+  "items": {
+    "assay_metals": {"Pt": "Assay Pt", "Pd": "Assay Pd", "Rh": "Assay Rh"},
+    "fees": {"treatment": "Treatment Charge", "interest": "Interest Charge", "wire": "Wire Fee"},
+    "line_desc_prefix": "Assay-",
+    "name_normalization": [
+      {"contains": "Sample Weight - ", "canonical": "Sample Weight"},
+      {"contains": "Mixed Lot - ", "canonical": "Mixed Lot"}
+    ],
+    "keep_description_keywords": ["Sample Weight - ", "Mixed Lot - "]
+  },
+
+  "invoicing": {
+    "primary":   {"label": "Site North", "customer_key": "custPrimary"},
+    "secondary": {"label": "Site South", "customer_key": "custSecondary"},
+    "primary_item_prefixes": ["Converters:"],
+    "secondary_item_prefixes": ["Metals:", "Each:"],
+    "primary_override_keywords": ["Sensor"],
+    "generated_by": "qb-opsbot"
+  },
+
+  "record": {"contract_col": "C", "done_col": "J", "link_col": "Q"}
+}

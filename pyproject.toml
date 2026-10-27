@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "qb-opsbot"
+version = "1.4.0"
+description = "A modular Windows bot that automates routine QuickBooks Desktop bookkeeping: turns refiner settlement statements into purchase orders, bills and invoices, and back-fills invoices for un-invoiced bills."
+authors = ["Weston-Matthews <weston.j.matthews@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "qb_opsbot" }]
+
+[tool.poetry.dependencies]
+python = "~3.8"
+pywin32 = { version = "^227", markers = "sys_platform == 'win32'" }
+openpyxl = "~3.0.3"
+easygui = "^0.98.1"
+xlrd = "^1.2.0"
+pyinstaller = "^3.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=6.2"
+
+[tool.poetry.scripts]
+qb-opsbot = "qb_opsbot.menu:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

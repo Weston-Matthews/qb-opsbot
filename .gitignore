@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# PyInstaller
+build/
+dist/
+
+# Local, site-specific files (never commit real company data)
+config.json
+settings.json
+log/
+data/*
+!data/*.example.csv
